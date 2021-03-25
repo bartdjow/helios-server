@@ -5,7 +5,6 @@ sudo apt-get install -y build-essential
 sudo apt-get update
 sudo apt-get install -y python3-setuptools
 sudo apt-get install -y python3-pip
-sudo pip install --upgrade pip
 sudo pip3 install virtualenv
 sudo virtualenv .venv && sudo chmod 777 -R $(pwd)/.venv/
 source $(pwd)/.venv/bin/activate
