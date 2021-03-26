@@ -51,6 +51,7 @@ activate(){
 activate
 
 python3 -m venv $(pwd)/venv
+source venv/bin/activate
 
 echo Resetando database...
 sudo chmod 777 reset.sh
