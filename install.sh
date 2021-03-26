@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install -y python3-setuptools
 sudo apt-get install -y python3-pip
 sudo apt-get install python3-venv
-python3 -m venv $(pwd)/venv
+
 
 sudo virtualenv .venv && sudo chmod 777 -R $(pwd)/.venv/
 source $(pwd)/.venv/bin/activate
@@ -49,6 +49,8 @@ activate(){
 	
 }
 activate
+
+python3 -m venv $(pwd)/venv
 
 echo Resetando database...
 sudo chmod 777 reset.sh
