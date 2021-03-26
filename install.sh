@@ -33,9 +33,7 @@ activate(){
 	sudo -u postgres createuser root
 	sudo -u postgres psql -c 'alter user '$(whoami)' with createdb;' postgres
 	sudo -u postgres createdb -O $(whoami) helios
-	echo Enviroment setup is Done!
 	sudo apt-get update
-	echo Updating...
 	sudo apt-get install -f
 	pip3 install -r requirements.txt
 	
@@ -44,11 +42,11 @@ activate(){
 }
 activate
 
-echo Reset database...
+echo Resetando database...
 sudo chmod 777 reset.sh
 sh -x ./reset.sh
 
-echo Your Server IP: $(hostname -i)
-echo Run Command: python manage.py runserver 0.0.0.0:8000
-echo Run Command: celery -A helios worker -S django -l info -E
+echo IP: $(hostname -i)
+echo Run: python manage.py runserver 0.0.0.0:8000
+echo Run: celery -A helios worker -S django -l info -E
 fi
