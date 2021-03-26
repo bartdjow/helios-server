@@ -25,8 +25,9 @@ activate(){
 	sudo pip3 install uwsgi
 	sudo pip3 install httplib2
 	sudo pip3 install oauth2client
+	sudo apt-get install libpq-dev
 	sudo pip3 install psycopg2
-	sudo pip3 install libpq-dev
+	
 	
 	
 	sudo apt update
