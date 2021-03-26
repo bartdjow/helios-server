@@ -29,9 +29,9 @@ sudo pip3 install -r requirements.txt
 
 python3.6 -m venv $(pwd)/venv
 sudo apt install -y libpq-dev
-sudo pip3 install -y psycopg2
+sudo pip3 install -r psycopg2
 source venv/bin/activate
-pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt
 
 sudo chmod 777 reset.sh
 sh -x ./reset.sh
