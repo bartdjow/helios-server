@@ -5,7 +5,7 @@ sudo apt-get install -y build-essential
 sudo apt-get update
 sudo apt-get install -y python3-setuptools
 sudo apt-get install -y python3-pip
-sudo apt-get install python3-venv
+sudo apt-get install -y python3-venv
 
 
 sudo virtualenv .venv && sudo chmod 777 -R $(pwd)/.venv/
@@ -29,7 +29,7 @@ activate(){
 	sudo pip3 install uwsgi
 	sudo pip3 install httplib2
 	sudo pip3 install oauth2client
-	sudo apt-get install libpq-dev
+	sudo apt-get install -y libpq-dev
 	sudo pip3 install psycopg2
 	
 	
