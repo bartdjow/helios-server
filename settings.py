@@ -81,13 +81,13 @@ MEDIA_URL = ''
 STATIC_URL = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = get_from_env('SECRET_KEY', 'replaceme')
+SECRET_KEY = get_from_env('SECRET_KEY', 'tl4i$7j)y433f#)fi0^7w9!)%mcl5i&yim(54$gw=57+0n2l(6')
 
 # If debug is set to false and ALLOWED_HOSTS is not declared, django raises  "CommandError: You must set settings.ALLOWED_HOSTS if DEBUG is False."
 # If in production, you got a bad request (400) error
 #More info: https://docs.djangoproject.com/en/1.7/ref/settings/#allowed-hosts (same for 1.6)
 
-ALLOWED_HOSTS = get_from_env('ALLOWED_HOSTS', 'localhost').split(",")
+ALLOWED_HOSTS = get_from_env('ALLOWED_HOSTS', '*').split(",")
 
 # Secure Stuff
 if get_from_env('SSL', '0') == '1':
