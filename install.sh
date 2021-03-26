@@ -36,6 +36,7 @@ pip3 install -r requirements.txt
 sudo chmod 777 reset.sh
 sh -x ./reset.sh
 
+source venv/bin/activate
 echo IP: $(hostname -i)
 echo Run: python manage.py runserver 0.0.0.0:8000
 echo Run: celery -A helios worker -S django -l info -E
