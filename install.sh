@@ -5,12 +5,16 @@ sudo apt-get install -y build-essential
 sudo apt-get update
 sudo apt-get install -y python3-setuptools
 sudo apt-get install -y python3-pip
-sudo pip3 install virtualenv
+sudo apt-get install python3-venv
+python3 -m venv $(pwd)/venv
+
 sudo virtualenv .venv && sudo chmod 777 -R $(pwd)/.venv/
 source $(pwd)/.venv/bin/activate
 
 activate(){
 	. ./.venv/bin/activate
+	
+	
 	
 	sudo apt-get install -y apache2
 	sudo apt-get install -y postgresql postgresql-contrib
@@ -39,7 +43,7 @@ activate(){
 	sudo -u postgres createdb -O $(whoami) helios
 	sudo apt-get update
 	sudo apt-get install -f
-	pip3 install -r requirements.txt
+	sudo pip3 install -r requirements.txt
 	
 
 	
